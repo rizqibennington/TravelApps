@@ -1,0 +1,93 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.rizqi.travel"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml
+10
+11    <application
+11-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:6:5-45:19
+12        android:allowBackup="true"
+12-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:7:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.1.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\65aa9efd5ac59e607457eb12354be1a7\core-1.1.0\AndroidManifest.xml:24:18-86
+14        android:debuggable="true"
+15        android:icon="@mipmap/ic_launcher"
+15-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:8:9-43
+16        android:label="@string/app_name"
+16-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:9:9-41
+17        android:roundIcon="@mipmap/ic_launcher_round"
+17-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:10:9-54
+18        android:supportsRtl="true"
+18-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:11:9-35
+19        android:theme="@style/AppTheme" >
+19-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:12:9-40
+20        <activity
+20-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:14:9-22:20
+21            android:name="com.rizqi.travel.activity.MainActivity"
+21-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:15:13-50
+22            android:screenOrientation="portrait" >
+22-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:16:13-49
+23            <intent-filter>
+23-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:17:13-21:29
+24                <action android:name="android.intent.action.MAIN" />
+24-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:18:17-69
+24-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:18:25-66
+25
+26                <category android:name="android.intent.category.LAUNCHER" />
+26-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:20:17-77
+26-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:20:27-74
+27            </intent-filter>
+28        </activity>
+29        <activity
+29-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:23:9-27:55
+30            android:name="com.rizqi.travel.activity.LoginActivity"
+30-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:24:13-51
+31            android:configChanges="keyboardHidden|orientation|screenSize"
+31-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:25:13-74
+32            android:screenOrientation="portrait"
+32-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:26:13-49
+33            android:windowSoftInputMode="adjustPan" />
+33-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:27:13-52
+34        <activity
+34-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:28:9-32:55
+35            android:name="com.rizqi.travel.activity.RegisterActivity"
+35-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:29:13-54
+36            android:configChanges="keyboardHidden|orientation|screenSize"
+36-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:30:13-74
+37            android:screenOrientation="portrait"
+37-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:31:13-49
+38            android:windowSoftInputMode="adjustPan" />
+38-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:32:13-52
+39        <activity
+39-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:33:9-35:52
+40            android:name="com.rizqi.travel.activity.ProfileActivity"
+40-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:34:13-53
+41            android:screenOrientation="portrait" />
+41-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:35:13-49
+42        <activity
+42-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:36:9-38:52
+43            android:name="com.rizqi.travel.activity.HistoryActivity"
+43-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:37:13-53
+44            android:screenOrientation="portrait" />
+44-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:38:13-49
+45        <activity
+45-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:39:9-41:52
+46            android:name="com.rizqi.travel.activity.BookKeretaActivity"
+46-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:40:13-56
+47            android:screenOrientation="portrait" />
+47-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:41:13-49
+48        <activity
+48-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:42:9-44:52
+49            android:name="com.rizqi.travel.activity.ListHotelActivity"
+49-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:43:13-55
+50            android:screenOrientation="portrait" />
+50-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:44:13-49
+51    </application>
+52
+53</manifest>
