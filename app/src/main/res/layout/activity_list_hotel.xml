@@ -36,7 +36,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:gravity="center"
-                android:text="KOTA TEMPAT HOTEL"
+                android:text="Pilih Hotel Dibawah"
                 android:textAllCaps="true"
                 android:textColor="@color/colorPrimary"
                 android:textSize="19sp"
@@ -46,16 +46,40 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
-                android:text="Pilih Kota Tempa Anda Menginap"
+                android:text="Pilih Kota Tempat Anda Menginap"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                 android:textColor="@color/black" />
 
             <Spinner
                 android:id="@+id/kota"
                 android:layout_width="match_parent"
-                android:layout_height="50dp" />
+                android:layout_height="35dp" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Jumlah Kamar"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@color/black" />
 
+            <Spinner
+                android:id="@+id/kamar"
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Durasi Malam"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/durasi"
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>

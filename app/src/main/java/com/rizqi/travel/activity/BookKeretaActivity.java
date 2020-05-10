@@ -139,7 +139,7 @@ public class BookKeretaActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 perhitunganHarga();
-                if (sAsal != null && sTujuan != null && sTanggal != null && sDewasa != null) {
+                if (sAsal != null && sTujuan != null && sTanggal != null && sDewasa != null && hargaTotal!=0) {
                     if ((sAsal.equalsIgnoreCase("jakarta") && sTujuan.equalsIgnoreCase("jakarta"))
                             || (sAsal.equalsIgnoreCase("bandung") && sTujuan.equalsIgnoreCase("bandung"))
                             || (sAsal.equalsIgnoreCase("semarang") && sTujuan.equalsIgnoreCase("semarang"))
@@ -182,7 +182,8 @@ public class BookKeretaActivity extends AppCompatActivity {
                                 .create();
                         dialog.show();
                     }
-                } else {
+                }
+                else {
                     Toast.makeText(BookKeretaActivity.this, "Mohon lengkapi data pemesanan!", Toast.LENGTH_LONG).show();
                 }
             }

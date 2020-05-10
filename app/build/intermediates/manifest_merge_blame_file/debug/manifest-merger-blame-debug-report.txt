@@ -11,7 +11,7 @@
 9-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:6:5-45:19
+11-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:6:5-48:19
 12        android:allowBackup="true"
 12-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:7:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -78,16 +78,22 @@
 44-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:38:13-49
 45        <activity
 45-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:39:9-41:52
-46            android:name="com.rizqi.travel.activity.BookKeretaActivity"
-46-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:40:13-56
+46            android:name="com.rizqi.travel.activity.HistoryKeretaActivity"
+46-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:40:13-59
 47            android:screenOrientation="portrait" />
 47-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:41:13-49
 48        <activity
 48-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:42:9-44:52
-49            android:name="com.rizqi.travel.activity.ListHotelActivity"
-49-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:43:13-55
+49            android:name="com.rizqi.travel.activity.BookKeretaActivity"
+49-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:43:13-56
 50            android:screenOrientation="portrait" />
 50-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:44:13-49
-51    </application>
-52
-53</manifest>
+51        <activity
+51-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:45:9-47:52
+52            android:name="com.rizqi.travel.activity.ListHotelActivity"
+52-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:46:13-55
+53            android:screenOrientation="portrait" />
+53-->D:\rizqi\project\Android\Pemesanan-Travel\TravelApps\app\src\main\AndroidManifest.xml:47:13-49
+54    </application>
+55
+56</manifest>

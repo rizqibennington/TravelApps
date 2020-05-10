@@ -93,7 +93,7 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="24dp"
-                android:text="Edit Profil"
+                android:text="Ubah Profil"
                 android:textColor="@android:color/white"
                 android:textSize="16sp"
                 android:theme="@style/Theme.MaterialComponents.Light"

@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.rizqi.travel.R;
@@ -45,6 +46,9 @@ public class ListHotelAdapter extends ArrayAdapter<ListHotelModel> {
 
         TextView harga = listItemView.findViewById(R.id.hargahotel);
         harga.setText("Rp. " + current.getHarga());
+
+        RatingBar ratingBar = listItemView.findViewById(R.id.ratingBar);
+        ratingBar.setRating(current.getRating());
 
         ImageView imageIcon = listItemView.findViewById(R.id.gambarhotel);
 

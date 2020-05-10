@@ -30,10 +30,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COL_NAMA_HOTEL = "nama_hotel";
     public static final String COL_KOTA_HOTEL = "kota_hotel";
     public static final String COL_HARGA_HOTEL = "harga_hotel";
+    public static final String COL_RATING_HOTEL = "rating_hotel";
     public static final String TABLE_BOOK_HOTEL = "tb_book_hotel";
     public static final String COL_ID_BOOK_HOTEL = "id_book_hotel";
-    public static final String COL_NAMA_HOTEL_BOOK = "nama_book_hotel";
-    public static final String COL_KOTA_HOTEL_BOOK = "kota_book_hotel";
+    public static final String COL_DURASI_MALAM = "durasi_hotel";
     public static final String COL_JUMLAH_KAMAR = "jumlah_kamar";
     public static final String COL_TOTAL_HARGA_HOTEL = "total_harga_hotel";
 
@@ -57,23 +57,29 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 " TEXT, FOREIGN KEY(" + COL_USERNAME + ") REFERENCES " + TABLE_USER
                 + ", FOREIGN KEY(" + COL_ID_BOOK + ") REFERENCES " + TABLE_BOOK + ")");
         db.execSQL("insert into " + TABLE_USER + " values ('rizqirahmansyah10@gmail.com','thehunter','Rizqi Rahmansyah');");
-        db.execSQL("create table " + TABLE_DAFTAR_HOTEL + " (" + COL_ID_HOTEL + " TEXT PRIMARY KEY, " +
-                COL_NAMA_HOTEL + " TEXT, " + COL_KOTA_HOTEL + " TEXT, " + COL_HARGA_HOTEL + " INTEGER)");
-        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('1','Hotel Indonesia','Jakarta','2000000');");
-        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('2','Hilton Bandung','Bandung','950000');");
-        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('3','Pesona Hotel Malioboro','Yogyakarta','500000');");
-        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('4','Hotel Majapahit','Surabaya','700000');");
-        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('5','Java Heritage Semarang','Semarang','200000');");
-        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('6','Hotel AryaDuta','Jakarta','1000000');");
-        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('7','Ibis Jakarta Thamrin','Jakarta','1235000');");
-        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('8','West Point Hotel','Bandung','675000');");
-        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('9','eL Hotel Royale','Bandung','200000');");
-        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('10','Jambuluwuk Malioboro','Yogyakarta','1470000');");
-        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('11','Indies Heritage','Yogyakarta','1300000');");
-        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('12','Louis Kienne Simpang Lima','Semarang','700000');");
-        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('13','Aston Semarang','Semarang','900000');");
-        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('14','Best Western Papilios','Surabaya','1300000');");
-        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('15','Gunawangsa Manyar','Surabaya','2800000');");
+        db.execSQL("create table " + TABLE_DAFTAR_HOTEL + " (" + COL_ID_HOTEL + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COL_NAMA_HOTEL + " TEXT, " + COL_KOTA_HOTEL + " TEXT, " + COL_HARGA_HOTEL + " INTEGER, "
+                + COL_RATING_HOTEL + " FLOAT)");
+        db.execSQL("create table " + TABLE_BOOK_HOTEL + " (" + COL_ID_BOOK_HOTEL + " TEXT PRIMARY KEY, " +
+                COL_USERNAME + " TEXT," + COL_NAMA_HOTEL + " TEXT, " + COL_DURASI_MALAM + " INTEGER, " +
+                COL_JUMLAH_KAMAR + " INTEGER, " + COL_TOTAL_HARGA_HOTEL +
+                " INTEGER, FOREIGN KEY(" + COL_USERNAME + ") REFERENCES " + TABLE_USER +
+                ", FOREIGN KEY(" + COL_NAMA_HOTEL + ") REFERENCES " + TABLE_BOOK_HOTEL +")");
+        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('0101','Hotel Indonesia','Jakarta','2500000','5');");
+        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('0201','Hilton Bandung','Bandung','2300000','5');");
+        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('0301','Pesona Hotel Malioboro','Yogyakarta','1800000','5');");
+        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('0401','Java Heritage Semarang','Semarang','1750000','5');");
+        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('0501','Hotel Majapahit','Surabaya','1550000','5');");
+        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('0102','Hotel AryaDuta','Jakarta','1500000','4');");
+        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('0202','West Point Hotel','Bandung','1475000','4');");
+        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('0302','Jambuluwuk Malioboro','Yogyakarta','1325000','4');");
+        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('0402','Louis Kienne Simpang Lima','Semarang','1200000','4');");
+        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('0502','Best Western Papilios','Surabaya','1130000','4');");
+        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('0103','Ibis Jakarta Thamrin','Jakarta','945000','3');");
+        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('0203','eL Hotel Royale','Bandung','750000','3');");
+        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('0303','Indies Heritage','Yogyakarta','725000','3');");
+        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('0403','Aston Semarang','Semarang','645000','3');");
+        db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('0503','Gunawangsa Manyar','Surabaya','500000','3');");
     }
 
     @Override

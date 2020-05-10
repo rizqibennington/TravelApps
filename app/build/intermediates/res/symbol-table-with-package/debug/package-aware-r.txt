@@ -1191,6 +1191,7 @@ id dialog_button
 id dimensions
 id direct
 id disableHome
+id durasi
 id edit_query
 id editprofile
 id email
@@ -1230,6 +1231,7 @@ id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id kamar
 id ke_daftar
 id ke_login
 id kota
@@ -1445,6 +1447,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_book_kereta
 layout activity_history
+layout activity_history_kereta
 layout activity_list_hotel
 layout activity_login
 layout activity_main
@@ -1465,7 +1468,7 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
-layout list_item_booking
+layout list_history_kereta
 layout list_item_hotel
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
