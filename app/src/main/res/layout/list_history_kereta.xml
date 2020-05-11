@@ -24,7 +24,7 @@
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:padding="4dp"
-            android:src="@drawable/profile" />
+            android:src="@drawable/book_kereta" />
 
         <LinearLayout
             android:id="@+id/text_container"

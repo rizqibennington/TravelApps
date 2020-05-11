@@ -35,6 +35,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COL_ID_BOOK_HOTEL = "id_book_hotel";
     public static final String COL_DURASI_MALAM = "durasi_hotel";
     public static final String COL_JUMLAH_KAMAR = "jumlah_kamar";
+    public static final String COL_TANGGAL_HOTEL = "tanggal_hotel";
     public static final String COL_TOTAL_HARGA_HOTEL = "total_harga_hotel";
 
     private SQLiteDatabase db;
@@ -57,12 +58,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 " TEXT, FOREIGN KEY(" + COL_USERNAME + ") REFERENCES " + TABLE_USER
                 + ", FOREIGN KEY(" + COL_ID_BOOK + ") REFERENCES " + TABLE_BOOK + ")");
         db.execSQL("insert into " + TABLE_USER + " values ('rizqirahmansyah10@gmail.com','thehunter','Rizqi Rahmansyah');");
-        db.execSQL("create table " + TABLE_DAFTAR_HOTEL + " (" + COL_ID_HOTEL + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+        db.execSQL("create table " + TABLE_DAFTAR_HOTEL + " (" + COL_ID_HOTEL + " TEXT PRIMARY KEY , " +
                 COL_NAMA_HOTEL + " TEXT, " + COL_KOTA_HOTEL + " TEXT, " + COL_HARGA_HOTEL + " INTEGER, "
                 + COL_RATING_HOTEL + " FLOAT)");
-        db.execSQL("create table " + TABLE_BOOK_HOTEL + " (" + COL_ID_BOOK_HOTEL + " TEXT PRIMARY KEY, " +
+        db.execSQL("create table " + TABLE_BOOK_HOTEL + " (" + COL_ID_BOOK_HOTEL + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COL_USERNAME + " TEXT," + COL_NAMA_HOTEL + " TEXT, " + COL_DURASI_MALAM + " INTEGER, " +
-                COL_JUMLAH_KAMAR + " INTEGER, " + COL_TOTAL_HARGA_HOTEL +
+                COL_JUMLAH_KAMAR + " INTEGER, " + COL_TANGGAL_HOTEL + " TEXT, " + COL_TOTAL_HARGA_HOTEL +
                 " INTEGER, FOREIGN KEY(" + COL_USERNAME + ") REFERENCES " + TABLE_USER +
                 ", FOREIGN KEY(" + COL_NAMA_HOTEL + ") REFERENCES " + TABLE_BOOK_HOTEL +")");
         db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('0101','Hotel Indonesia','Jakarta','2500000','5');");

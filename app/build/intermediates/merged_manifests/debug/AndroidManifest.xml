@@ -46,6 +46,9 @@
             android:name="com.rizqi.travel.activity.HistoryKeretaActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name="com.rizqi.travel.activity.HistoryHotelActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="com.rizqi.travel.activity.BookKeretaActivity"
             android:screenOrientation="portrait" />
         <activity

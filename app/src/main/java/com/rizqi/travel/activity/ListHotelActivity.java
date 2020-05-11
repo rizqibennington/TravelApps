@@ -1,13 +1,17 @@
 package com.rizqi.travel.activity;
 
+import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -23,6 +27,7 @@ import com.rizqi.travel.database.DatabaseHelper;
 import com.rizqi.travel.model.ListHotelModel;
 import com.rizqi.travel.session.SessionManager;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 
 public class ListHotelActivity extends AppCompatActivity {
@@ -32,11 +37,14 @@ public class ListHotelActivity extends AppCompatActivity {
     SQLiteDatabase db;
     SessionManager session;
     Spinner spinKota, spinKamar, spinDurasi;
-    String id_hotel = "", kota, harga, namahotel, deskripsi, sKota, sKamar, sDurasi;
+    String id_hotel = "", kota, harga, namahotel, deskripsi, sKota, sKamar, sDurasi, sTanggal;
     Float rating;
     int jumlahKamar, durasiMalam, totalharga;
+    private EditText etTanggal;
+    private DatePickerDialog dpTanggal;
     String email;
     TextView tvNotFound;
+    Calendar newCalendar = Calendar.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,8 +109,11 @@ public class ListHotelActivity extends AppCompatActivity {
         dbHelper = new DatabaseHelper(this);
         db = dbHelper.getReadableDatabase();
         tvNotFound = findViewById(R.id.noListHotel);
-
         session = new SessionManager(getApplicationContext());
+        etTanggal = findViewById(R.id.tanggal_booking);
+        etTanggal.setInputType(InputType.TYPE_NULL);
+        etTanggal.requestFocus();
+        setDateTimeField();
 
         HashMap<String, String> user = session.getUserDetails();
 
@@ -164,15 +175,19 @@ public class ListHotelActivity extends AppCompatActivity {
                 jumlahKamar = Integer.parseInt(sKamar);
                 durasiMalam = Integer.parseInt(sDurasi);
                 totalharga = dtHargaHotel * durasiMalam * jumlahKamar;
+                if (sTanggal == null){
+                    Toast.makeText(ListHotelActivity.this, "Pilih Tanggalnya Dulu!", Toast.LENGTH_LONG).show();
+                }
+                else{
                 AlertDialog.Builder builder = new AlertDialog.Builder(ListHotelActivity.this);
-                builder.setTitle(dtNamaHotel+" "+durasiMalam+" Malam "+jumlahKamar+" Kamar Total : Rp."+totalharga);
+                builder.setTitle(dtNamaHotel+" "+sDurasi+" Malam "+jumlahKamar+" Kamar Total : Rp."+totalharga);
                 builder.setPositiveButton("Ya", new DialogInterface.OnClickListener(){
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         try {
-                            db.execSQL("INSERT INTO TB_BOOK_HOTEL (username, nama_hotel, durasi_hotel, jumlah_kamar, total_harga_hotel) " +
+                            db.execSQL("INSERT INTO TB_BOOK_HOTEL (username, nama_hotel, durasi_hotel, jumlah_kamar, tanggal_hotel, total_harga_hotel) " +
                                     "VALUES ('" + email + "','" + dtNamaHotel + "','" + durasiMalam + "','" + jumlahKamar
-                                    +  "','" + totalharga + "');");
+                                    +  "','" + sTanggal + "','" + totalharga + "');");
                                     Toast.makeText(ListHotelActivity.this, "Pesanan berhasil", Toast.LENGTH_LONG).show();
                             finish();
                         }
@@ -183,7 +198,7 @@ public class ListHotelActivity extends AppCompatActivity {
                 });
                 builder.setNegativeButton("Tidak", null);
                 builder.create().show();
-            }
+            }}
         });
 
         if (id_hotel.equals("")) {
@@ -195,4 +210,29 @@ public class ListHotelActivity extends AppCompatActivity {
         }
 
     }
+
+    private void setDateTimeField() {
+        etTanggal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dpTanggal.show();
+            }
+        });
+
+
+        dpTanggal = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+
+            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                Calendar newDate = Calendar.getInstance();
+                newDate.set(year, monthOfYear, dayOfMonth);
+                String[] bulan = {"Januari", "Februari", "Maret", "April", "Mei",
+                        "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"};
+                sTanggal = dayOfMonth + " " + bulan[monthOfYear] + " " + year;
+                etTanggal.setText(sTanggal);
+
+            }
+
+        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
+    }
+
 }

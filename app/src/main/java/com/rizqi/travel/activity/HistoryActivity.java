@@ -35,7 +35,8 @@ public class HistoryActivity extends AppCompatActivity {
     }
 
     public void historyHotel(View v) {
-        Toast.makeText(getApplicationContext(), "Mohon maaf, sistem sedang dalam pengembangan.", Toast.LENGTH_LONG).show();
+        Intent i = new Intent(this, HistoryHotelActivity.class);
+        startActivity(i);
     }
 
 }

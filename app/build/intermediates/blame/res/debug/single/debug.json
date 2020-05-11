@@ -36,12 +36,12 @@
         "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\1ccb8d3327f3cfe30b0d84024a4ff333\\appcompat-1.1.0\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
-        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable_header.png.flat",
-        "source": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\src\\main\\res\\drawable\\header.png"
-    },
-    {
         "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_item_background_holo_light.xml.flat",
         "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\1ccb8d3327f3cfe30b0d84024a4ff333\\appcompat-1.1.0\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable_header.png.flat",
+        "source": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\src\\main\\res\\drawable\\header.png"
     },
     {
         "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -68,12 +68,12 @@
         "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\1ccb8d3327f3cfe30b0d84024a4ff333\\appcompat-1.1.0\\res\\drawable\\btn_radio_off_to_on_mtrl_animation.xml"
     },
     {
-        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_search_dropdown_item_icons_2line.xml.flat",
-        "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\1ccb8d3327f3cfe30b0d84024a4ff333\\appcompat-1.1.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
-    },
-    {
         "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_fail.png.flat",
         "source": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\src\\main\\res\\drawable-xhdpi\\ic_fail.png"
+    },
+    {
+        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_search_dropdown_item_icons_2line.xml.flat",
+        "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\1ccb8d3327f3cfe30b0d84024a4ff333\\appcompat-1.1.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
         "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_date.xml.flat",
@@ -112,12 +112,12 @@
         "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\65aa9efd5ac59e607457eb12354be1a7\\core-1.1.0\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
-        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
-    },
-    {
         "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_bg_color_selector.xml.flat",
         "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\a27a8e00e3e6c6b2bbb1083fa765b7d1\\material-1.0.0\\res\\color\\mtrl_btn_bg_color_selector.xml"
+    },
+    {
+        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
         "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
@@ -180,20 +180,20 @@
         "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\65aa9efd5ac59e607457eb12354be1a7\\core-1.1.0\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
-        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
-        "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\1ccb8d3327f3cfe30b0d84024a4ff333\\appcompat-1.1.0\\res\\drawable-ldrtl-xxxhdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
-    },
-    {
-        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_person.png.flat",
-        "source": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\src\\main\\res\\drawable-mdpi\\ic_person.png"
+        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\1ccb8d3327f3cfe30b0d84024a4ff333\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
         "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
         "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\65aa9efd5ac59e607457eb12354be1a7\\core-1.1.0\\res\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\1ccb8d3327f3cfe30b0d84024a4ff333\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
+        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_person.png.flat",
+        "source": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\src\\main\\res\\drawable-mdpi\\ic_person.png"
+    },
+    {
+        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\1ccb8d3327f3cfe30b0d84024a4ff333\\appcompat-1.1.0\\res\\drawable-ldrtl-xxxhdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_profile.png.flat",
@@ -316,36 +316,36 @@
         "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\1ccb8d3327f3cfe30b0d84024a4ff333\\appcompat-1.1.0\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
-        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_expanded_menu_layout.xml.flat",
-        "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\1ccb8d3327f3cfe30b0d84024a4ff333\\appcompat-1.1.0\\res\\layout\\abc_expanded_menu_layout.xml"
-    },
-    {
-        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\1ccb8d3327f3cfe30b0d84024a4ff333\\appcompat-1.1.0\\res\\drawable-xxxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_tabs_colored_ripple_color.xml.flat",
-        "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\a27a8e00e3e6c6b2bbb1083fa765b7d1\\material-1.0.0\\res\\color\\mtrl_tabs_colored_ripple_color.xml"
+        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\1ccb8d3327f3cfe30b0d84024a4ff333\\appcompat-1.1.0\\res\\drawable-xxxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
         "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_seek_thumb.xml.flat",
         "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\1ccb8d3327f3cfe30b0d84024a4ff333\\appcompat-1.1.0\\res\\color\\abc_tint_seek_thumb.xml"
     },
     {
-        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\1ccb8d3327f3cfe30b0d84024a4ff333\\appcompat-1.1.0\\res\\drawable-xxxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
+        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_tabs_colored_ripple_color.xml.flat",
+        "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\a27a8e00e3e6c6b2bbb1083fa765b7d1\\material-1.0.0\\res\\color\\mtrl_tabs_colored_ripple_color.xml"
     },
     {
-        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_btn_state_list_anim.xml.flat",
-        "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\a27a8e00e3e6c6b2bbb1083fa765b7d1\\material-1.0.0\\res\\animator\\mtrl_btn_state_list_anim.xml"
+        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\1ccb8d3327f3cfe30b0d84024a4ff333\\appcompat-1.1.0\\res\\drawable-xxxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_expanded_menu_layout.xml.flat",
+        "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\1ccb8d3327f3cfe30b0d84024a4ff333\\appcompat-1.1.0\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_design_ic_visibility_off.png.flat",
+        "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\a27a8e00e3e6c6b2bbb1083fa765b7d1\\material-1.0.0\\res\\drawable-xxxhdpi-v4\\design_ic_visibility_off.png"
     },
     {
         "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_select_dialog_material.xml.flat",
         "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\1ccb8d3327f3cfe30b0d84024a4ff333\\appcompat-1.1.0\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
-        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_design_ic_visibility_off.png.flat",
-        "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\a27a8e00e3e6c6b2bbb1083fa765b7d1\\material-1.0.0\\res\\drawable-xxxhdpi-v4\\design_ic_visibility_off.png"
+        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_btn_state_list_anim.xml.flat",
+        "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\a27a8e00e3e6c6b2bbb1083fa765b7d1\\material-1.0.0\\res\\animator\\mtrl_btn_state_list_anim.xml"
     },
     {
         "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_hint_foreground_material_light.xml.flat",
@@ -392,12 +392,12 @@
         "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\1ccb8d3327f3cfe30b0d84024a4ff333\\appcompat-1.1.0\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
-        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_ripple_color.xml.flat",
-        "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\a27a8e00e3e6c6b2bbb1083fa765b7d1\\material-1.0.0\\res\\color\\mtrl_btn_ripple_color.xml"
-    },
-    {
         "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_item_subheader.xml.flat",
         "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\a27a8e00e3e6c6b2bbb1083fa765b7d1\\material-1.0.0\\res\\layout\\design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_ripple_color.xml.flat",
+        "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\a27a8e00e3e6c6b2bbb1083fa765b7d1\\material-1.0.0\\res\\color\\mtrl_btn_ripple_color.xml"
     },
     {
         "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -570,6 +570,10 @@
     {
         "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_bg_home_wave.png.flat",
         "source": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\bg_home_wave.png"
+    },
+    {
+        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_history_hotel.xml.flat",
+        "source": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\src\\main\\res\\layout\\list_history_hotel.xml"
     },
     {
         "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_design_password_eye.xml.flat",
@@ -1190,6 +1194,10 @@
     {
         "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\65aa9efd5ac59e607457eb12354be1a7\\core-1.1.0\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_history_hotel.xml.flat",
+        "source": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\src\\main\\res\\layout\\activity_history_hotel.xml"
     },
     {
         "merged": "D:\\rizqi\\project\\Android\\Pemesanan-Travel\\TravelApps\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_arrow_drop_right_black_24dp.xml.flat",

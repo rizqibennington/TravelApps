@@ -1343,6 +1343,7 @@ id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tanggal
 id tanggal_berangkat
+id tanggal_booking
 id tbHistory
 id tbKrl
 id tbListHotel
@@ -1447,6 +1448,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_book_kereta
 layout activity_history
+layout activity_history_hotel
 layout activity_history_kereta
 layout activity_list_hotel
 layout activity_login
@@ -1468,6 +1470,7 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout list_history_hotel
 layout list_history_kereta
 layout list_item_hotel
 layout mtrl_layout_snackbar
