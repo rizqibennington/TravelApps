@@ -34,38 +34,39 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        //ngambil data dari db sesuai session
         dbHelper = new DatabaseHelper(this);
-
         session = new SessionManager(getApplicationContext());
-
         HashMap<String, String> user = session.getUserDetails();
         email = user.get(SessionManager.KEY_EMAIL);
-
         db = dbHelper.getReadableDatabase();
+        //perintah select data untuk ambil data profil
         cursor = db.rawQuery("SELECT * FROM TB_USER WHERE username = '" + email + "'", null);
         cursor.moveToFirst();
         if (cursor.getCount() > 0) {
             cursor.moveToPosition(0);
             name = cursor.getString(2);
         }
+        //deklarasi
         btnEdit = findViewById(R.id.editprofile);
         final EditText lblName = findViewById(R.id.lblName);
         TextView lblEmail = findViewById(R.id.lblEmail);
-
         lblName.setText(name);
         lblEmail.setText(email);
-
         setupToolbar();
+
+        //perintah yang terjadi saat tombol edit diklik
         btnEdit.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 nama = lblName.getText().toString();
                 try {
                     if (email.trim().length() > 0 && nama.trim().length() > 0 && name.trim().length() > 0) {
-                    dbHelper.open();
-                    dbHelper.Update(nama, email);
-                    Toast.makeText(ProfileActivity.this, "Update Berhasil", Toast.LENGTH_LONG).show();
-                    finish();
+                        //update di dbhelper
+                        dbHelper.open();
+                        dbHelper.Update(nama, email);
+                        Toast.makeText(ProfileActivity.this, "Update Berhasil", Toast.LENGTH_LONG).show();
+                        finish();
                     } else {
                         Toast.makeText(ProfileActivity.this, "Update Gagal!", Toast.LENGTH_LONG).show();
                     }
@@ -77,7 +78,7 @@ public class ProfileActivity extends AppCompatActivity {
 
 
     }
-
+    //nyalain toolbar atas
     private void setupToolbar() {
         Toolbar toolbar = findViewById(R.id.tbProfile);
         toolbar.setTitle("Identitas Diri");

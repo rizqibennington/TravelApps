@@ -51,14 +51,17 @@ public class ListHotelActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_hotel);
 
+        //deklarasi isi spinner
         final String[] kota = {"Semua", "Jakarta", "Bandung", "Semarang", "Yogyakarta", "Surabaya"};
         final String[] kamar = {"1", "2", "3", "4", "5", "6"};
         final String[] durasi = {"1", "2", "3", "4", "5", "6"};
 
+        //deklarasiin menu spinnernya dari xml
         spinKota = findViewById(R.id.kota);
         spinKamar = findViewById(R.id.kamar);
         spinDurasi = findViewById(R.id.durasi);
 
+        //kasih tau ambil data dari mana spinnernya
         ArrayAdapter<CharSequence> adapterKamar = new ArrayAdapter<CharSequence>(this, android.R.layout.simple_spinner_item, kamar);
         adapterKamar.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinKamar.setAdapter(adapterKamar);
@@ -69,6 +72,7 @@ public class ListHotelActivity extends AppCompatActivity {
         adapterDurasi.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinDurasi.setAdapter(adapterDurasi);
 
+        //ambil set isian spinner sesuai item yg dipilih
         spinKota.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -106,6 +110,7 @@ public class ListHotelActivity extends AppCompatActivity {
             }
         });
 
+        //deklarasi plus ambil db dan sesi
         dbHelper = new DatabaseHelper(this);
         db = dbHelper.getReadableDatabase();
         tvNotFound = findViewById(R.id.noListHotel);
@@ -113,15 +118,16 @@ public class ListHotelActivity extends AppCompatActivity {
         etTanggal = findViewById(R.id.tanggal_booking);
         etTanggal.setInputType(InputType.TYPE_NULL);
         etTanggal.requestFocus();
+        //panggil fungsi datetime buat setting kalender dibawah
         setDateTimeField();
-
         HashMap<String, String> user = session.getUserDetails();
-
         email = user.get(SessionManager.KEY_EMAIL);
+        //refresh halaman listnya
         refreshList();
         setupToolbar();
     }
 
+    //nyalain toolbar
     private void setupToolbar() {
         Toolbar toolbar = findViewById(R.id.tbListHotel);
         toolbar.setTitle("Daftar Hotel");
@@ -138,8 +144,10 @@ public class ListHotelActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    //isi dari refreshlist
     public void refreshList() {
         final ArrayList<ListHotelModel> hasil = new ArrayList<>();
+        //ambil db
         if (sKota=="Semua")
         {
             cursor = db.rawQuery("SELECT * FROM TB_DAFTAR_HOTEL", null);
@@ -150,6 +158,7 @@ public class ListHotelActivity extends AppCompatActivity {
         else{
             cursor = db.rawQuery("SELECT * FROM TB_DAFTAR_HOTEL WHERE kota_hotel='" + sKota + "'", null);
         }
+        //jelasin data yang diambil db sesuai kolom
         cursor.moveToFirst();
         for (int i = 0; i < cursor.getCount(); i++) {
             cursor.moveToPosition(i);
@@ -162,10 +171,12 @@ public class ListHotelActivity extends AppCompatActivity {
             hasil.add(new ListHotelModel(id_hotel, namahotel, deskripsi, harga, rating, R.drawable.book_hotel));
         }
 
+        //deklarasi listview
         ListView listHotel = findViewById(R.id.list_hotel);
         ListHotelAdapter arrayAdapter = new ListHotelAdapter(this, hasil);
         listHotel.setAdapter(arrayAdapter);
 
+        //masuk proses pas item hotel di klik
         listHotel.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -211,6 +222,7 @@ public class ListHotelActivity extends AppCompatActivity {
 
     }
 
+    //setting datetime
     private void setDateTimeField() {
         etTanggal.setOnClickListener(new View.OnClickListener() {
             @Override

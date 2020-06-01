@@ -16,6 +16,7 @@ public class SessionManager {
     Context context;
     int PRIVATE_MODE = 0;
 
+    //deklarasi
     private static final String PREF_NAME = "rizqiPref";
     private static final String IS_LOGIN = "IsLoggedIn";
     public static final String KEY_NAME = "name";
@@ -28,6 +29,7 @@ public class SessionManager {
         editor = pref.edit();
     }
 
+    //mulai buat sesi
     public void createLoginSession(String email) {
 
         editor.putBoolean(IS_LOGIN, true);
@@ -35,6 +37,7 @@ public class SessionManager {
         editor.commit();
     }
 
+    //validasi cek login
     public void checkLogin() {
 
         if (!this.isLoggedIn()) {
@@ -54,6 +57,7 @@ public class SessionManager {
         return user;
     }
 
+    //hapus sesi saat signout
     public void logoutUser() {
 
         editor.clear();

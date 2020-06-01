@@ -23,6 +23,7 @@ public class ListHotelAdapter extends ArrayAdapter<ListHotelModel> {
 
     @SuppressLint("SetTextI18n")
     @Override
+    //deklarasiin layoutnya
     public View getView(int position, View convertView, ViewGroup parent) {
         View listItemView = convertView;
         if (listItemView == null) {
@@ -32,6 +33,7 @@ public class ListHotelAdapter extends ArrayAdapter<ListHotelModel> {
 
         ListHotelModel current = getItem(position);
 
+        //pencocokan xml dengan data model
         TextView idHotel = listItemView.findViewById(R.id.id_hotel);
         idHotel.setText(current.getIdHotel());
 

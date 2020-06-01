@@ -48,20 +48,23 @@ public class BookKeretaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_kereta);
-
+        //ambil database
         dbHelper = new DatabaseHelper(BookKeretaActivity.this);
         db = dbHelper.getReadableDatabase();
 
+        //deklarasiin isian dari spinner drop-down button
         final String[] asal = {"Jakarta", "Bandung", "Semarang", "Yogyakarta", "Surabaya"};
         final String[] tujuan = {"Jakarta", "Bandung", "Semarang", "Yogyakarta", "Surabaya"};
         final String[] dewasa = {"0", "1", "2", "3", "4", "5"};
         final String[] anak = {"0", "1", "2", "3", "4", "5"};
 
+        //deklarasiin si spinner
         spinAsal = findViewById(R.id.asal);
         spinTujuan = findViewById(R.id.tujuan);
         spinDewasa = findViewById(R.id.dewasa);
         spinAnak = findViewById(R.id.anak);
 
+        //beri tahu spinner ambil data dari mana
         ArrayAdapter<CharSequence> adapterAsal = new ArrayAdapter<CharSequence>(this, android.R.layout.simple_spinner_item, asal);
         adapterAsal.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinAsal.setAdapter(adapterAsal);
@@ -78,6 +81,7 @@ public class BookKeretaActivity extends AppCompatActivity {
         adapterAnak.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinAnak.setAdapter(adapterAnak);
 
+        //ngeset isian spinner sesuai pilihan
         spinAsal.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -126,6 +130,7 @@ public class BookKeretaActivity extends AppCompatActivity {
             }
         });
 
+        //deklarasi biasa
         Button btnBook = findViewById(R.id.book);
         etTanggal = findViewById(R.id.tanggal_berangkat);
         etTanggal.setInputType(InputType.TYPE_NULL);
@@ -135,6 +140,7 @@ public class BookKeretaActivity extends AppCompatActivity {
         email = user.get(SessionManager.KEY_EMAIL);
         setDateTimeField();
 
+        //perintah booking diklik
         btnBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -209,6 +215,7 @@ public class BookKeretaActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    //deklarasi perhitungan harga
     public void perhitunganHarga() {
         if (sAsal.equalsIgnoreCase("jakarta") && sTujuan.equalsIgnoreCase("bandung")) {
             hargaDewasa = 100000;
@@ -280,6 +287,7 @@ public class BookKeretaActivity extends AppCompatActivity {
         hargaTotal = hargaTotalDewasa + hargaTotalAnak;
     }
 
+    //setting buat kalender pas diklik
     private void setDateTimeField() {
         etTanggal.setOnClickListener(new View.OnClickListener() {
             @Override

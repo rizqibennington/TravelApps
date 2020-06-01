@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-
+    //deklarasiin variabel untuk menggantikan nama tabel/kolom yg dipake di database nanti
     public static final String DATABASE_NAME = "db_travel";
     public static final String TABLE_USER = "tb_user";
     public static final String COL_USERNAME = "username";
@@ -44,28 +44,30 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         super(context, DATABASE_NAME, null, 1);
     }
 
+    //proses membuat sqllite
     @Override
     public void onCreate(SQLiteDatabase db) {
-
+        //proses create
         db.execSQL("PRAGMA foreign_keys=ON");
-        db.execSQL("create table " + TABLE_USER + " (" + COL_USERNAME + " TEXT PRIMARY KEY, " + COL_PASSWORD +
-                " TEXT, " + COL_NAME + " TEXT)");
+        db.execSQL("create table " + TABLE_USER + " (" + COL_USERNAME + " VARCHAR PRIMARY KEY, " + COL_PASSWORD +
+                " VARCHAR, " + COL_NAME + " VARCHAR)");
         db.execSQL("create table " + TABLE_BOOK + " (" + COL_ID_BOOK + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                COL_ASAL + " TEXT, " + COL_TUJUAN + " TEXT" + ", " + COL_TANGGAL + " TEXT, " + COL_DEWASA + " TEXT, "
-                + COL_ANAK + " TEXT)");
-        db.execSQL("create table " + TABLE_HARGA + " (" + COL_USERNAME + " TEXT, " + COL_ID_BOOK + " INTEGER, " +
-                COL_HARGA_DEWASA + " TEXT, " + COL_HARGA_ANAK + " TEXT, " + COL_HARGA_TOTAL +
-                " TEXT, FOREIGN KEY(" + COL_USERNAME + ") REFERENCES " + TABLE_USER
+                COL_ASAL + " VARCHAR, " + COL_TUJUAN + " VARCHAR" + ", " + COL_TANGGAL + " VARCHAR, " + COL_DEWASA + " INTEGER, "
+                + COL_ANAK + " INTEGER)");
+        db.execSQL("create table " + TABLE_HARGA + " (" + COL_USERNAME + " VARCHAR, " + COL_ID_BOOK + " INTEGER, " +
+                COL_HARGA_DEWASA + " INTEGER, " + COL_HARGA_ANAK + " INTEGER, " + COL_HARGA_TOTAL +
+                " INTEGER, FOREIGN KEY(" + COL_USERNAME + ") REFERENCES " + TABLE_USER
                 + ", FOREIGN KEY(" + COL_ID_BOOK + ") REFERENCES " + TABLE_BOOK + ")");
-        db.execSQL("insert into " + TABLE_USER + " values ('rizqirahmansyah10@gmail.com','thehunter','Rizqi Rahmansyah');");
-        db.execSQL("create table " + TABLE_DAFTAR_HOTEL + " (" + COL_ID_HOTEL + " TEXT PRIMARY KEY , " +
-                COL_NAMA_HOTEL + " TEXT, " + COL_KOTA_HOTEL + " TEXT, " + COL_HARGA_HOTEL + " INTEGER, "
+        db.execSQL("create table " + TABLE_DAFTAR_HOTEL + " (" + COL_ID_HOTEL + " VARCHAR PRIMARY KEY , " +
+                COL_NAMA_HOTEL + " VARCHAR, " + COL_KOTA_HOTEL + " VARCHAR, " + COL_HARGA_HOTEL + " INTEGER, "
                 + COL_RATING_HOTEL + " FLOAT)");
         db.execSQL("create table " + TABLE_BOOK_HOTEL + " (" + COL_ID_BOOK_HOTEL + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                COL_USERNAME + " TEXT," + COL_NAMA_HOTEL + " TEXT, " + COL_DURASI_MALAM + " INTEGER, " +
-                COL_JUMLAH_KAMAR + " INTEGER, " + COL_TANGGAL_HOTEL + " TEXT, " + COL_TOTAL_HARGA_HOTEL +
+                COL_USERNAME + " VARCHAR," + COL_NAMA_HOTEL + " VARCHAR, " + COL_DURASI_MALAM + " INTEGER, " +
+                COL_JUMLAH_KAMAR + " INTEGER, " + COL_TANGGAL_HOTEL + " VARCHAR, " + COL_TOTAL_HARGA_HOTEL +
                 " INTEGER, FOREIGN KEY(" + COL_USERNAME + ") REFERENCES " + TABLE_USER +
                 ", FOREIGN KEY(" + COL_NAMA_HOTEL + ") REFERENCES " + TABLE_BOOK_HOTEL +")");
+        //proses insert data
+        db.execSQL("insert into " + TABLE_USER + " values ('rizqirahmansyah10@gmail.com','thehunter','Rizqi Rahmansyah');");
         db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('0101','Hotel Indonesia','Jakarta','2500000','5');");
         db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('0201','Hilton Bandung','Bandung','2300000','5');");
         db.execSQL("insert into " + TABLE_DAFTAR_HOTEL + " values ('0301','Pesona Hotel Malioboro','Yogyakarta','1800000','5');");
@@ -93,6 +95,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db = this.getWritableDatabase();
     }
 
+    //fungsi register buat registerActivity
     public boolean Register(String username, String password, String name) throws SQLException {
 
         @SuppressLint("Recycle") Cursor mCursor = db.rawQuery("INSERT INTO " + TABLE_USER + "(" + COL_USERNAME + ", " + COL_PASSWORD + ", " + COL_NAME + ") VALUES (?,?,?)", new String[]{username, password, name});
@@ -102,6 +105,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return false;
     }
 
+    //fungsi login buat LoginActivity
     public boolean Login(String username, String password) throws SQLException {
         @SuppressLint("Recycle") Cursor mCursor = db.rawQuery("SELECT * FROM " + TABLE_USER + " WHERE " + COL_USERNAME + "=? AND " + COL_PASSWORD + "=?", new String[]{username, password});
         if (mCursor != null) {
@@ -110,6 +114,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return false;
     }
 
+    //buat update di profil
     public boolean Update(String nama, String email) throws SQLException {
 
         @SuppressLint("Recycle") Cursor mCursor = db.rawQuery("UPDATE " + TABLE_USER + " SET " + COL_NAME + "=? WHERE " + COL_USERNAME + "=?", new String[]{nama, email});

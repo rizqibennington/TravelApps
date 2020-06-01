@@ -37,22 +37,24 @@ public class RegisterActivity extends AppCompatActivity {
             getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
 
+        //ambil database
         dbHelper = new DatabaseHelper(this);
         db = dbHelper.getWritableDatabase();
 
+        //deklarasi
         txtName = findViewById(R.id.reg_nama);
         txtUsername = findViewById(R.id.reg_email);
         txtPassword = findViewById(R.id.reg_password);
-
         btnDaftar = findViewById(R.id.daftar);
         btnKeLogin = findViewById(R.id.ke_login);
-
         btnDaftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //ambil data
                 name = txtName.getText().toString();
                 username = txtUsername.getText().toString();
                 password = txtPassword.getText().toString();
+                //proses insert data terhubung ke databasehelper
                 try {
                     if (username.trim().length() > 0 && password.trim().length() > 0 && name.trim().length() > 0) {
                         dbHelper.open();

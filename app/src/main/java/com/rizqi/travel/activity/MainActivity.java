@@ -23,10 +23,11 @@ public class MainActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //session user
         session = new SessionManager(getApplicationContext());
         session.checkLogin();
 
+        //tombol signout
         btnLogout = findViewById(R.id.out);
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,21 +48,24 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //masuk menu profil
     public void profileMenu(View v) {
         Intent i = new Intent(this, ProfileActivity.class);
         startActivity(i);
     }
-
+    //masuk menu riwayat
     public void historyMenu(View v) {
         Intent i = new Intent(this, HistoryActivity.class);
         startActivity(i);
     }
 
+    //masuk menu pesan tiket kereta
     public void bookKereta(View v) {
         Intent i = new Intent(this, BookKeretaActivity.class);
         startActivity(i);
     }
 
+    //masuk menu pesan kamar hotel
     public void bookHotel(View v) {
         Intent i = new Intent(this, ListHotelActivity.class);
         startActivity(i);

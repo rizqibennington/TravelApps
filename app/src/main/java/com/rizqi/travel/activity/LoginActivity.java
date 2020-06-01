@@ -109,6 +109,7 @@ public class LoginActivity extends AppCompatActivity {
         win.setAttributes(winParams);
     }
 
+    //pertanyaan mau keluar aplikasi atau tidak saat menekan tombol kembali
     @Override
     public void onBackPressed() {
         final AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
